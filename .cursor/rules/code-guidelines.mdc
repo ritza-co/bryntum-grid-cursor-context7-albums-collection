@@ -1,0 +1,65 @@
+---
+alwaysApply: true
+description: JavaScript and ES6+ coding guidelines for consistent code style
+---
+
+# Code Guidelines
+
+## Module System
+- **Always use ES modules** (import/export) syntax instead of CommonJS (require/module.exports)
+- Use named imports and exports when possible for better tree-shaking and clarity
+
+```javascript
+// ✅ Good - ES modules
+import { useState, useEffect } from 'react';
+import utils from './utils.js';
+export const MyComponent = () => {};
+
+// ❌ Avoid - CommonJS
+const React = require('react');
+const utils = require('./utils');
+module.exports = MyComponent;
+```
+
+## Modern JavaScript Features
+- **Use `const` and `let`** instead of `var`
+  - `const` for values that won't be reassigned
+  - `let` for values that will be reassigned
+- **Use arrow functions** for concise function expressions
+- **Use template literals** with backticks for string interpolation
+- **Use destructuring** for objects and arrays when appropriate
+- **Use spread operator** (...) for copying and merging
+- **Use default parameters** instead of conditional assignments
+
+```javascript
+// ✅ Good - Modern JavaScript
+const API_URL = 'https://api.example.com';
+let currentUser = null;
+
+const fetchUser = async (id, options = {}) => {
+  const { timeout = 5000 } = options;
+  const response = await fetch(`${API_URL}/users/${id}`);
+  return response.json();
+};
+
+const { name, email, ...rest } = user;
+const updatedUser = { ...user, lastLogin: new Date() };
+
+// ❌ Avoid - Legacy JavaScript
+var API_URL = 'https://api.example.com';
+var currentUser = null;
+
+function fetchUser(id, options) {
+  options = options || {};
+  var timeout = options.timeout || 5000;
+  return fetch(API_URL + '/users/' + id).then(function(response) {
+    return response.json();
+  });
+}
+```
+
+## Additional Guidelines
+- Use async/await instead of Promise chains when possible
+- Use optional chaining (`?.`) and nullish coalescing (`??`) operators
+- Prefer array methods like `map()`, `filter()`, `reduce()` over traditional loops
+- Use object shorthand syntax when property names match variable names

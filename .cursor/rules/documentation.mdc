@@ -1,0 +1,45 @@
+---
+alwaysApply: true
+description: Documentation guidelines for using external libraries and Bryntum components
+---
+
+# Documentation Guidelines
+
+## External Documentation Access
+- **Always use the context7 MCP** to get the latest external documentation for Bryntum and other libraries
+- Before implementing any feature or component, check the official documentation for:
+  - Correct API usage patterns
+  - Available configuration options
+  - Relevant example code
+  - Best practices and recommendations
+
+## Bryntum-Specific Guidelines
+- **Use npm installation method** when multiple installation options are available
+- Follow the recommended approach from the official Bryntum documentation
+- Check for version-specific API changes and use the latest stable patterns
+- Look for official code examples that match the specific use case (e.g., CRUD operations, specific frameworks)
+
+## Documentation Research Process
+1. **Start with context7 MCP** - Always fetch the latest documentation before coding
+2. **Review examples thoroughly** - Look for code samples that closely match your requirements
+3. **Prefer official patterns** - When multiple approaches exist, use the officially recommended method
+4. **Check compatibility** - Ensure the documented approach works with your current setup
+
+## Example Workflow
+```javascript
+// ✅ Good - Check documentation first
+// 1. Use context7 MCP to get Bryntum Grid documentation
+// 2. Find recommended npm installation and setup
+// 3. Look for CRUD examples if building CRUD functionality
+// 4. Follow the documented API patterns
+
+// ❌ Avoid - Guessing or using outdated patterns
+// Don't implement without checking current documentation
+// Don't use deprecated methods or non-recommended approaches
+```
+
+## Integration Best Practices
+- When working with frameworks (React, Vue, Angular), check for framework-specific documentation
+- Always verify compatibility between different library versions
+- Use official integration guides when available
+- Follow the documented configuration patterns exactly

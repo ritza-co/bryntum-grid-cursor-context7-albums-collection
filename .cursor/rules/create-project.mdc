@@ -1,0 +1,54 @@
+---
+alwaysApply: false
+---
+# Project Creation Guidelines
+
+## Project Organization
+
+- Use npm workspaces to manage the frontend and backend dependencies from the root folder (https://docs.npmjs.com/cli/v11/using-npm/workspaces)
+
+- Define the workspaces in the root folder's package.json file
+
+```json
+{
+  "name": "bryntum-grid-express-app",
+  "workspaces": ["backend", "frontend"]
+}
+```
+
+The root folder should have the following structure:
+
+```
+package.json
+node_modules
+├── backend
+│   ├── package.json
+│   ├── node_modules
+│   └── ...
+├── frontend
+│   ├── package.json
+│   ├── node_modules
+│   └── ...
+...
+```
+
+- Add a `.gitignore` file to the root of the project to ignore node_modules, .env, database files, and other files that should not be committed to a GitHub repository.
+
+- Use the npm package `concurrently` in the root folder's package.json file to run the backend and frontend servers at the same time.
+- npm run dev: Run the project in development mode: start the backend dev server and frontend dev server concurrently.
+- npm run seed: Seed the database with example data
+
+## Frontend
+
+- Use Vite and JavaScript.
+- Add a basic Bryntum Grid connected to the backend.
+- Use the Bryntum Grid Stockholm CSS theme.
+
+## Backend
+
+- Use Nodemon, Express.js, and JavaScript.
+- Use a local SQLite database to store the data and use an ORM (Sequelize) to query the database.
+- Create an example `albums.json` file for a Bryntum Grid. Use this data to seed the database.
+- Seed the database with example data using a `seed.js` file in the backend folder.
+- For data updates, allow null values and partial updates.
+- Create a REST API for the Bryntum Grid.
