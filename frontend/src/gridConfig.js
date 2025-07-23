@@ -1,5 +1,3 @@
-import { StringHelper } from '@bryntum/grid';
-
 export const gridConfig = {
     appendTo: 'app',
     
@@ -10,13 +8,13 @@ export const gridConfig = {
         updateUrl: 'http://localhost:3001/api/albums',
         deleteUrl: 'http://localhost:3001/api/albums',
         autoLoad: true,
-        autoCommit: false,
+        autoCommit: true,
         
         useRestfulMethods: true,
         httpMethods: {
             read: 'GET',
             create: 'POST',
-            update: 'PUT',
+            update: 'PATCH',
             delete: 'DELETE'
         }
     },
@@ -65,44 +63,41 @@ export const gridConfig = {
             field: 'title',
             text: 'Album Title',
             width: 200,
-            editor: 'text',
-            htmlEncode: false,
-            renderer: ({ value }) => StringHelper.xss(value)
+            editor: 'text'
         },
         {
             field: 'artist',
             text: 'Artist',
             width: 160,
-            editor: 'text',
-            htmlEncode: false,
-            renderer: ({ value }) => StringHelper.xss(value)
+            editor: 'text'
         },
         {
             field: 'genre',
             text: 'Genre',
             width: 120,
-            editor: 'text',
-            htmlEncode: false,
-            renderer: ({ value }) => StringHelper.xss(value || '')
+            editor: 'text'
         },
         {
             field: 'year',
             text: 'Year',
             width: 80,
             type: 'number',
-            editor: 'number'
+            editor: 'number',
+            format: {
+                template: '0',
+            }
         },
         {
             field: 'duration',
             text: 'Duration (min)',
-            width: 110,
+            width: 130,
             type: 'number',
             editor: 'number'
         },
         {
             field: 'rating',
             text: 'Rating',
-            width: 80,
+            width: 100,
             type: 'number',
             editor: 'number',
             renderer: ({ value }) => value ? `⭐ ${value}/10` : ''
@@ -111,9 +106,7 @@ export const gridConfig = {
             field: 'label',
             text: 'Record Label',
             width: 140,
-            editor: 'text',
-            htmlEncode: false,
-            renderer: ({ value }) => StringHelper.xss(value || '')
+            editor: 'text'
         },
         {
             field: 'price',
