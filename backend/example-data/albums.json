@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "year": 1982,
+    "duration": 42,
+    "rating": 9.8,
+    "label": "Epic Records",
+    "price": 12.99
+  },
+  {
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "duration": 43,
+    "rating": 9.5,
+    "label": "Harvest Records",
+    "price": 14.99
+  },
+  {
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1969,
+    "duration": 47,
+    "rating": 9.7,
+    "label": "Apple Records",
+    "price": 13.99
+  },
+  {
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Hard Rock",
+    "year": 1980,
+    "duration": 42,
+    "rating": 9.2,
+    "label": "Atlantic Records",
+    "price": 11.99
+  },
+  {
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "genre": "Rock",
+    "year": 1977,
+    "duration": 39,
+    "rating": 9.4,
+    "label": "Warner Bros. Records",
+    "price": 12.99
+  },
+  {
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "genre": "Rock",
+    "year": 1976,
+    "duration": 43,
+    "rating": 9.1,
+    "label": "Asylum Records",
+    "price": 13.49
+  },
+  {
+    "title": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1971,
+    "duration": 42,
+    "rating": 9.6,
+    "label": "Atlantic Records",
+    "price": 14.49
+  },
+  {
+    "title": "The Wall",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1979,
+    "duration": 81,
+    "rating": 9.3,
+    "label": "Harvest Records",
+    "price": 19.99
+  },
+  {
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1975,
+    "duration": 39,
+    "rating": 8.9,
+    "label": "Columbia Records",
+    "price": 12.49
+  },
+  {
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "year": 1991,
+    "duration": 49,
+    "rating": 9.0,
+    "label": "DGC Records",
+    "price": 11.99
+  },
+  {
+    "title": "Kind of Blue",
+    "artist": "Miles Davis",
+    "genre": "Jazz",
+    "year": 1959,
+    "duration": 46,
+    "rating": 9.9,
+    "label": "Columbia Records",
+    "price": 16.99
+  },
+  {
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "year": 1966,
+    "duration": 36,
+    "rating": 9.2,
+    "label": "Capitol Records",
+    "price": 13.99
+  },
+  {
+    "title": "What's Going On",
+    "artist": "Marvin Gaye",
+    "genre": "Soul",
+    "year": 1971,
+    "duration": 36,
+    "rating": 9.1,
+    "label": "Tamla Records",
+    "price": 12.99
+  },
+  {
+    "title": "OK Computer",
+    "artist": "Radiohead",
+    "genre": "Alternative Rock",
+    "year": 1997,
+    "duration": 53,
+    "rating": 9.4,
+    "label": "Parlophone",
+    "price": 14.99
+  },
+  {
+    "title": "Sgt. Pepper's Lonely Hearts Club Band",
+    "artist": "The Beatles",
+    "genre": "Psychedelic Rock",
+    "year": 1967,
+    "duration": 40,
+    "rating": 9.8,
+    "label": "Parlophone",
+    "price": 15.99
+  }
+] 

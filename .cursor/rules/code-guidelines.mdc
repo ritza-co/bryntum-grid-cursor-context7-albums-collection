@@ -63,3 +63,4 @@ function fetchUser(id, options) {
 - Use optional chaining (`?.`) and nullish coalescing (`??`) operators
 - Prefer array methods like `map()`, `filter()`, `reduce()` over traditional loops
 - Use object shorthand syntax when property names match variable names
+- Dont ignore errors or warnings

@@ -40,9 +40,32 @@ node_modules
 
 ## Frontend
 
-- Use Vite and JavaScript.
-- Add a basic Bryntum Grid connected to the backend.
+- Use Vite and JavaScript. Use the standard Vite project structure.
+- Add a basic Bryntum Grid connected to the backend. Take a look at the quick start guides to see how to do this. 
+- Save the Bryntum Grid config in a separate file:
+
+```
+export const gridConfig: GridConfig = {
+    appendTo : 'app',
+    ...
+};
+```
+
+- Add the Grid to the page in the `main.js` file.
+
+```
+import { Grid } from '@bryntum/grid';
+import { gridConfig } from './gridConfig';
+import './style.css';
+
+const grid = new Grid(gridConfig);
+```
+
 - Use the Bryntum Grid Stockholm CSS theme.
+- Make the Bryntum component take up the full height and width of the page
+- When widgets such as buttons are needed, use Bryntum widgets for the UI if possible.
+- Use `htmlEncode: false` for column cell content that needs HTML rendering
+- Always sanitize user input - use Bryntum's `StringHelper.xss` method.
 
 ## Backend
 
