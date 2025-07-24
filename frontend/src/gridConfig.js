@@ -27,7 +27,7 @@ export const gridConfig = {
     readOnly: false,
     multiSelect: true,
     
-    // Toolbar with CRUD buttons
+    // Toolbar with CRUD buttons and genre filter
     tbar: [
         {
             type: 'button',
@@ -42,6 +42,104 @@ export const gridConfig = {
             onAction: 'up.deleteSelected'
         },
         '->', // Push remaining items to the right
+        
+        // Genre filter buttons
+        {
+            type: 'container',
+            cls: 'genre-filter-container',
+            html: '<label class="genre-filter-label">Filter by genre:</label>',
+            style: 'margin-right: 10px; display: flex; align-items: center;'
+        },
+        {
+            type: 'buttongroup',
+            cls: 'genre-filter-buttons',
+            ref: 'genreFilterButtons',
+            style: 'margin-right: 20px;',
+            items: [
+                {
+                    type: 'button',
+                    text: 'All',
+                    cls: 'genre-filter-pill active',
+                    ref: 'allGenresBtn',
+                    pressed: true,
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Pop',
+                    cls: 'genre-filter-pill',
+                    ref: 'popBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Rock',
+                    cls: 'genre-filter-pill',
+                    ref: 'rockBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Progressive Rock',
+                    cls: 'genre-filter-pill',
+                    ref: 'progressiveRockBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Hard Rock',
+                    cls: 'genre-filter-pill',
+                    ref: 'hardRockBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Alternative Rock',
+                    cls: 'genre-filter-pill',
+                    ref: 'alternativeRockBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Psychedelic Rock',
+                    cls: 'genre-filter-pill',
+                    ref: 'psychedelicRockBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Grunge',
+                    cls: 'genre-filter-pill',
+                    ref: 'grungeBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Jazz',
+                    cls: 'genre-filter-pill',
+                    ref: 'jazzBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                },
+                {
+                    type: 'button',
+                    text: 'Soul',
+                    cls: 'genre-filter-pill',
+                    ref: 'soulBtn',
+                    toggleable: true,
+                    onAction: 'up.onGenreFilter'
+                }
+            ]
+        },
+        
         {
             type: 'button',
             text: 'Refresh',

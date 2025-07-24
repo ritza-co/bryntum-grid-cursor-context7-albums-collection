@@ -72,6 +72,41 @@ function updateAlbum({ record }) {
     console.log('Album updated:', record.data);
 }
 
+function onGenreFilter({ source: button }) {
+    const grid = this; // 'this' refers to the grid instance
+    const buttonGroup = grid.widgetMap.genreFilterButtons;
+    const genre = button.text;
+
+    // Clear pressed state from all buttons
+    buttonGroup.items.forEach(btn => {
+        btn.pressed = false;
+        btn.element.classList.remove('active');
+    });
+
+    // Set pressed state for clicked button
+    button.pressed = true;
+    button.element.classList.add('active');
+
+    // Apply filter based on selected genre
+    if (genre === 'All') {
+        // Remove genre filter to show all albums
+        grid.store.removeFilter('genre');
+        console.log('Showing all albums');
+    } else {
+        // Apply genre filter using Bryntum's store filtering
+        grid.store.filter({
+            id: 'genre', // Filter ID for easy removal/replacement
+            property: 'genre',
+            value: genre,
+            operator: '='
+        });
+        console.log(`Filtering by genre: ${genre}`);
+    }
+
+    // Log current store count
+    console.log(`${grid.store.count} albums shown after filter`);
+}
+
 function showError(message) {
     // Simple error display - in a real app you might use a more sophisticated notification system
     const appContainer = document.querySelector('#app');
@@ -95,4 +130,5 @@ const grid = new Grid(gridConfig);
 grid.addAlbum = () => addAlbum(grid);
 grid.deleteSelected = () => deleteSelected(grid);
 grid.refreshData = () => refreshData(grid);
-grid.updateAlbum = updateAlbum; 
+grid.updateAlbum = updateAlbum;
+grid.onGenreFilter = onGenreFilter; 
