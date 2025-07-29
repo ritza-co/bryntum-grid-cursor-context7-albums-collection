@@ -49,7 +49,7 @@ bryntum-grid-express-app/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <repository-url> bryntum-grid-express-app
    cd bryntum-grid-express-app
    ```
 
